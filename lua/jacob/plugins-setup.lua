@@ -49,7 +49,8 @@ require("packer").startup(function(use)
 	use({ "nvim-tree/nvim-tree.lua" })
 
 	-- icons
-	use({ "kyazdani42/nvim-web-devicons" })
+	-- use({ "kyazdani42/nvim-web-devicons" })
+	use("nvim-tree/nvim-web-devicons")
 
 	-- statusline
 	use({ "nvim-lualine/lualine.nvim" })
