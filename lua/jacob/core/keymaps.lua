@@ -24,7 +24,7 @@ keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
 -- turn off hilighting after searching
-keymap.set("n", "<leader>h", ":noh")
+keymap.set("n", "<leader>h", ":noh<CR>")
 
 -- plugin keymaps
 
