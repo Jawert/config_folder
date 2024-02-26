@@ -105,6 +105,9 @@ require("packer").startup(function(use)
 	-- git signs plugin
 	use({ "lewis6991/gitsigns.nvim" })
 
+	-- context stuff
+	use({ "nvim-treesitter/nvim-treesitter-context" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end
