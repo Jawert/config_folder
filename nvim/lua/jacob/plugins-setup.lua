@@ -111,6 +111,11 @@ require("packer").startup(function(use)
 	-- nextflow specific
 	use({ "LukeGoodsell/nextflow-vim" })
 
+	-- transparent background
+	use({ "xiyaowong/transparent.nvim" })
+
+	use({ "gelguy/wilder.nvim" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end
