@@ -108,6 +108,9 @@ require("packer").startup(function(use)
 	-- context stuff
 	use({ "nvim-treesitter/nvim-treesitter-context" })
 
+	-- nextflow specific
+	use({ "LukeGoodsell/nextflow-vim" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end
