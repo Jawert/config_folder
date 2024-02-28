@@ -5,9 +5,11 @@ size = 16
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
+#family = "RobotoMono Nerd Font"
 
 [window]
 decorations = "Buttonless"
+opacity = 0.95
 
 [window.padding]
 x = 5
