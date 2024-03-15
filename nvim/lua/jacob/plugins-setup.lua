@@ -116,6 +116,12 @@ require("packer").startup(function(use)
 
 	use({ "gelguy/wilder.nvim" })
 
+	-- rust stuff
+	use({
+		"mrcjkb/rustaceanvim",
+		version = "^4", -- Recommended
+		ft = { "rust" },
+	})
 	if packer_boostrap then
 		require("packer").sync()
 	end
