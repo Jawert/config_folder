@@ -105,9 +105,6 @@ require("packer").startup(function(use)
 	-- git signs plugin
 	use({ "lewis6991/gitsigns.nvim" })
 
-	-- context stuff
-	use({ "nvim-treesitter/nvim-treesitter-context" })
-
 	-- nextflow specific
 	use({ "LukeGoodsell/nextflow-vim" })
 
@@ -116,12 +113,20 @@ require("packer").startup(function(use)
 
 	use({ "gelguy/wilder.nvim" })
 
-	-- rust stuff
+	use({ "ray-x/go.nvim" })
+	use({ "ray-x/guihua.lua" })
+
+	-- line indent colors
+	use({ "lukas-reineke/indent-blankline.nvim" })
+
 	use({
-		"mrcjkb/rustaceanvim",
-		version = "^4", -- Recommended
-		ft = { "rust" },
+		"code-biscuits/nvim-biscuits",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate",
+		},
 	})
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

@@ -119,10 +119,25 @@ _G.packer_plugins = {
     path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -169,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
+  ["nvim-biscuits"] = {
+    loaded = true,
+    path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/nvim-biscuits",
+    url = "https://github.com/code-biscuits/nvim-biscuits"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -189,11 +209,6 @@ _G.packer_plugins = {
     path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
-  },
   ["nvim-ts-autotag"] = {
     loaded = true,
     path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
@@ -213,13 +228,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  rustaceanvim = {
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "/Users/jacobwert/.local/share/nvim/site/pack/packer/opt/rustaceanvim",
-    url = "https://github.com/mrcjkb/rustaceanvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -264,13 +272,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType rust ++once lua require("packer.load")({'rustaceanvim'}, { ft = "rust" }, _G.packer_plugins)]]
-time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
